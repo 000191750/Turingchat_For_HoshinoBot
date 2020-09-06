@@ -4,7 +4,6 @@ import hoshino
 from hoshino import Service, aiorequests, priv
 
 sv_help = '''
-[回话概率 0.5]设置回话概率（仅管理员且数值在0-0.5之间）
 [查看回话概率]查看回话概率
 '''.strip()
 
@@ -25,7 +24,7 @@ async def tulingchat(bot, ctx):
 			}
 		},
 		'userInfo': {
-			'apiKey': 'c4e935916f6742ba846a3c357d973fc2',
+			'apiKey': '在这里填写你申请到的图灵APIKEY',
 			'userId': ctx['user_id'],
 			#'groupId': ctx['group_id']
 		}
@@ -44,7 +43,8 @@ async def tulingchat(bot, ctx):
 		for result in rsp_payload['results']:
 			if result['resultType'] == 'text':
 				await bot.send(ctx, result['values']['text'])
-
+'''
+#用于调试用不建议用
 @sv.on_prefix('回话概率')
 async def repeat_frequency(bot, ev):
 	if not priv.check_priv(ev, priv.SUPERUSER):
@@ -60,6 +60,7 @@ async def repeat_frequency(bot, ev):
 			await bot.send(ev, f'{keyword}不是合法的值，请输入一个0-0.5之间的小数')
 	else:
 		await bot.send(ev, f'{keyword}不是数字，请输入一个0-0.5之间的小数')
+'''
 
 @sv.on_fullmatch('查看回话概率')
 async def check_frequency(bot, ev):
