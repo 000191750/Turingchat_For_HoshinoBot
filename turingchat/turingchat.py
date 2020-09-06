@@ -26,7 +26,7 @@ async def tulingchat(bot, ctx):
 			}
 		},
 		'userInfo': {
-			'apiKey': '7508cb12fdb54ec7896d193e4ef10ffe',
+			'apiKey': '7508b12fdb54ec7896d193e4ef10ffe',
 			#在这里填写你的图灵的apikey
 			'userId': ctx['user_id'],
 			#'groupId': ctx['group_id']
