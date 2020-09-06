@@ -1,2 +1,4 @@
-将文件夹放入HoshinoBot的modules文件夹内\n
-然后在__bot__.py中启用turingchat
+如何使用
+=======
+    将文件夹放入HoshinoBot的modules文件夹内<br>    
+    然后在__bot__.py中启用turingchat
